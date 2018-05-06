@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.huseyincengiz.instagramclone.Home.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relLayoutPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Top Toolbar-->
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_top_tabs" />
+        </RelativeLayout>
+
+        <!-- Middle Section(Body) -->
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayout1">
+
+            <include layout="@layout/layout_center_viewpager" />
+        </RelativeLayout>
+
+        <!-- bottom Navigation -->
+        <include layout="@layout/layout_bottom_navigation_view" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
